@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+
+<h1>Programa Calculo Números Pares en Rango</h1>
+
+<script> 
+    function print(argument) {
+		document.write(argument)
+		simpleLineBreak()
+	}
+
+    function doubleLineBreak() {
+		document.write("<br>")
+		document.write("<br>")
+    }
+
+	function simpleLineBreak() {
+		document.write("<br>")
+	}
+
+    var counter = 1
+    var limit = parseInt(prompt("Indique hasta que número desea conocer los pares"))
+    
+    print("Los números pares del 1 al " + limit)
+
+    while (counter <= limit) {
+        if (counter % 2 == 0) {
+            print(counter)
+        }
+        counter++
+    }
+
+    print("Fin")
+
+</script>

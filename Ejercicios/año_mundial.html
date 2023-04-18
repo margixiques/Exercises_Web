@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+
+<h1>Programa Año Mundial FIFA!!</h1>
+
+<script> 
+    function print(argument) {
+		document.write(argument)
+		simpleLineBreak()
+	}
+
+    function doubleLineBreak() {
+		document.write("<br>")
+		document.write("<br>")
+    }
+
+	function simpleLineBreak() {
+		document.write("<br>")
+	}
+
+    var yearMundial = 1930
+    var limit = parseInt(prompt("Indique hasta que año del mundial quiere calcular.")) 
+
+    while (yearMundial < limit) {
+        print("Hubo mundial de FIFA en el año: " + yearMundial)
+        yearMundial += 4
+    }
+    print("Fin!!")
+
+    
+
+</script>

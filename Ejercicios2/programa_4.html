@@ -1,0 +1,42 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    let screen = document.querySelector("canvas")
+    let paintbrush = screen.getContext("2d")
+
+    paintbrush.fillStyle = "lightgray"
+    paintbrush.fillRect(0,0,600,400)
+
+    function showAlert(event) {
+        var x = event.pageX - screen.offsetLeft; //pos x
+        var y = event.pageY - screen.offsetTop; //pos y
+        var d = new Date(); //crea una variable de tipo date
+        var hora = checkTime(d.getHours()) + ":" + checkTime(d.getMinutes()) + ":" + checkTime(d.getSeconds());
+        //Verifica si el número de las horas, minutos o segundos, tiene un solo dígito, 
+        //caso positivo le adiciona el cero en la frente para obtener el formato deseado 00:00:00
+        function checkTime(i){
+            if (i<10){
+                i="0" + i;
+            }
+            return i;
+        }
+
+        alert("La hora es: " + hora + " y las coordenadas son: x=" + x + ", y=" + y);
+    }
+
+    function paintCircle(event) {
+        var x = event.pageX - screen.offsetLeft
+        var y = event.pageY - screen.offsetTop
+
+        paintbrush.fillStyle = "pink"
+        paintbrush.beginPath()
+        paintbrush.arc(x,y,10,0,2*3.14)
+        paintbrush.fill()
+        console.log(x + "," + y)
+    }
+
+    //screen.onclick = showAlert
+    screen.onclick = paintCircle
+
+</script>
+

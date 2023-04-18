@@ -1,0 +1,64 @@
+<meta charset="utf-8">
+
+<h1>Programa Cálculo IMC!!</h1>
+
+<script>
+
+	function print(argument) {
+		document.write(argument)
+		simpleLineBreak();
+	};
+
+	function doubleLineBreak() {
+		document.write("<br>");
+		document.write("<br>");
+	};
+
+	function simpleLineBreak() {
+		document.write("<br>");
+	};
+
+	// function imcCalculator(weight, height, name) {
+	// 	imc = weight / (height * height);
+	// 	print("El IMC calculado de " + name + " es: " + imc);
+	// 	return imc;
+	// };
+
+	// function imcAverage(imc1,imc2) {
+	// 	imcAve = (imc1 + imc2) / 2;
+	// 	print("El promedio de los IMCs calculados es: " + imcAve);
+
+	// };
+
+	// function statusImc(imc, name) {
+	// 	if (imc < 18.5) {
+	// 		print(name + " tiene insuficiencia ponderal.");
+	// 	} else if (imc >= 18.5 && imc <= 24.9) {
+	// 		print(name + " tiene intervalo normal.");
+	// 	} else if (imc > 24.9) {
+	// 		print(name + " tiene sobrepeso.");
+	// 	} else  if (imc >=25 && imc <=29.9) {
+	// 		print(name + " tiene preobesidad.");
+	// 	} else {
+	// 		print(name + " tiene obesidad.");
+	// 	}
+	// };
+
+	// weight = prompt("Indique su peso") ;
+	// height = prompt("Indique su altura");
+	// name = prompt("Indique su nombre");
+
+
+	// let imcCalculate = imcCalculator(weight,height, name);
+	// statusImc(imcCalculate,name);	
+
+	var age = parseInt(prompt("¿Cúal es tu edad?"))
+	var haveLicense = prompt("¿Tienes licencia? Responde S o N")
+
+	if (age >= 18 && haveLicense == "S") {
+		print("Puedes conducir")
+	} else {
+		print("No puedes conducir")
+	}
+
+</script>

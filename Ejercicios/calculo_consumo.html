@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+
+<h3>¿Alcohol o gasolina?</h3>
+
+<script> 
+
+	function lineBreak(){
+		
+		document.write("<br>");
+		document.write("<br>");
+	
+	};
+
+	function print(text){
+
+		document.write(text);
+
+	};
+
+	let capacityTank = 40
+	let distanceGas = 480
+	let distanceAlcohol = 300
+	var efficient
+
+	efficient = distanceGas / capacityTank
+
+	print("La eficiencia del carro usando gasolina es: " + efficient + "kms.");
+
+	lineBreak();
+
+	efficient = distanceAlcohol / capacityTank
+
+	print("La eficiencia del carro usando alcohol es: " + efficient + "kms.");
+
+	lineBreak();
+	
+	print("El carro tiene una mayor eficiencia con el uso de gasolina que de alcohol.");
+
+</script> 

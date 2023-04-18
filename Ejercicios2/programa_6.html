@@ -1,0 +1,43 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    let screen = document.querySelector("canvas")
+    let paintbrush = screen.getContext("2d")
+    paintbrush.fillStyle = "lightgray"
+    paintbrush.fillRect(0,0,600,400)
+
+    function paintCircunference(x,y,radio) {
+
+        paintbrush.fillStyle = "blue"
+        paintbrush.beginPath()
+        paintbrush.arc(x,y,radio,0,2*Math.PI)
+        paintbrush.fill()
+    }
+
+    function cleanScreen() {
+        paintbrush.clearRect(0,0,600,400)
+    }
+
+    let x = 0
+    let isMovingForward = true
+
+
+    function refreshScreen() {
+        cleanScreen()
+        paintCircunference(x,20,10)
+        if (x == (screen.width - 20)) {
+            isMovingForward = false
+        } else if (x == 20) {
+            isMovingForward = true
+        }
+        x = isMovingForward ? x + 1 : x - 1
+    }
+
+    setInterval(refreshScreen,5)
+
+    
+
+    
+</script>
+
+

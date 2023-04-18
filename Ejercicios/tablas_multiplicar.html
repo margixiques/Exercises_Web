@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+
+<h1>Programa Tablas de Multiplicar</h1>
+
+<script> 
+    function print(argument) {
+		document.write(argument)
+		simpleLineBreak()
+	}
+
+    function doubleLineBreak() {
+		document.write("<br>")
+		document.write("<br>")
+    }
+
+	function simpleLineBreak() {
+		document.write("<br>")
+	}
+
+    var multiplicador = 1
+    var number = parseInt(prompt("Indique el número al que desea calcular la tabla de multiplicar.")) 
+
+    print("WHILE")
+
+    while (multiplicador <= 10) {
+        print(multiplicador + " x " + number + " = " + (multiplicador * number))
+        multiplicador += 1
+    }
+    doubleLineBreak()
+    print("FOR")
+
+    for (let multiplicador = 1; multiplicador <= 10; multiplicador++) {
+        print(multiplicador + " x " + number + " = " + (multiplicador * number))    
+    }
+    
+
+</script>

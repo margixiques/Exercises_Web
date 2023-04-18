@@ -1,0 +1,31 @@
+<meta charset="UTF-8"/>
+
+<input/>
+<button>Verificar si acertó el secreto</button>
+
+<script>
+   
+   var secret = randomFunction(1,10)
+   var input = document.querySelector("input")
+   input.focus()
+
+   function randomFunction(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+   function verificate() {
+    
+        if (parseInt(input.value) == secret) {
+            alert("Acertó")
+        } else {
+            alert("No acertó")
+        }
+
+        input.value = " "
+        input.focus()
+
+   }
+
+   var button = document.querySelector("button")
+   button.onclick = verificate
+
+</script>

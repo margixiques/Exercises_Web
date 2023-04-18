@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+
+<h1>Programa Calculo Edad Promedio</h1>
+
+<script> 
+    function print(argument) {
+		document.write(argument)
+		simpleLineBreak()
+	}
+
+    function doubleLineBreak() {
+		document.write("<br>")
+		document.write("<br>")
+    }
+
+	function simpleLineBreak() {
+		document.write("<br>")
+	}
+
+    var counter = 1
+    var familyMembers = parseInt(prompt("Indique la cantidad de miembros de su familia"))
+    var ageTotal = 0
+
+    while (counter <= familyMembers) {
+        var age = parseInt(prompt("Ingrese la edad de su familiar"))
+        ageTotal += age
+        counter++
+    }
+
+    for (let index = 1; index <= familyMembers; index++) {
+        var age = parseInt(prompt("Ingrese la edad de su familiar"))
+        ageTotal += age
+    }
+    var ageAverage = ageTotal / familyMembers
+    print("La edad promedio de esta familia es con WHILE: " + ageAverage)
+    print("La edad promedio de esta familia es con FOR: " + ageAverage)
+
+</script>

@@ -1,0 +1,30 @@
+<canvas width="600" height="400">
+
+</canvas>
+
+<script>
+    let screen = document.querySelector("canvas")
+    let paintbrush = screen.getContext("2d")
+
+    paintbrush.fillStyle = "yellow" // property
+    paintbrush.fillRect(0,0,600,150) // function
+
+    paintbrush.fillStyle = "blue" // property
+    paintbrush.fillRect(0,150,600,275) // function
+
+    paintbrush.fillStyle = "red" // property
+    paintbrush.fillRect(0,275,600,400) // function
+
+    paintbrush.fillStyle = "lightgrey" // property
+    paintbrush.beginPath()
+    paintbrush.moveTo(300,275)
+    paintbrush.lineTo(200,400)
+    paintbrush.lineTo(400,400)
+    paintbrush.fill()
+
+    paintbrush.fillStyle = "lightgrey" // property
+    paintbrush.beginPath()
+    paintbrush.arc(300,225,50,0,2*3.14)
+    paintbrush.fill()
+
+</script>
