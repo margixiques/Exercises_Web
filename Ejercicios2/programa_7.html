@@ -1,0 +1,63 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    let screen = document.querySelector("canvas")
+    let paintbrush = screen.getContext("2d")
+    paintbrush.fillStyle = "lightgray"
+    paintbrush.fillRect(0,0,600,400)
+
+    let radio = 10
+    let xRandom
+    let yRandom
+
+    function paintCircunference(x,y,radio,color) {
+
+        paintbrush.fillStyle = color
+        paintbrush.beginPath()
+        paintbrush.arc(x,y,radio,0,2*Math.PI)
+        paintbrush.fill()
+    }
+
+    function randomFunction(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+
+    function designTarget(x,y) {
+        paintCircunference(x,y,radio + 20,"red")
+        paintCircunference(x,y,radio + 10,"white")
+        paintCircunference(x,y,radio,"red")
+        
+    }
+
+    function cleanScreen() {
+        paintbrush.clearRect(0,0,600,400)
+    }
+
+
+    function refreshScreen() {
+        cleanScreen()
+        xRandom = randomFunction(0,600)
+        yRandom = randomFunction(0,400)
+        designTarget(xRandom,yRandom)
+    }
+    setInterval(refreshScreen,1000)
+
+    function shoot(event) {
+        let x = event.pageX - screen.offsetLeft
+        let y = event.pageY - screen.offsetTop
+
+        if ((x < xRandom + radio) && 
+            (x > xRandom - radio) &&
+            (y < yRandom + radio) &&
+            (y > yRandom - radio)) {
+                alert("Tiro acertado")
+        }
+       
+    }
+
+    screen.onclick = shoot
+
+    
+</script>
+
+
