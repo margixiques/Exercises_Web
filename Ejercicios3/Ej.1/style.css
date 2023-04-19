@@ -1,18 +1,14 @@
-body{
-    background: white;
-}
-
-.principal{
-    background: #CCCCCC;
-    padding: 20px;
-}
-
 #banner{
     width: 100%;
 }
 
 .titulo_principal{
     padding-left: 20px;
+}
+
+.principal{
+    background: #CCCCCC;
+    padding: 20px;
 }
 
 p{
@@ -28,6 +24,10 @@ em strong{
     font-size: 20px;
 }
 
+.diferenciales{
+    padding: 30px;
+}
+
 .titulo_centralizado{
     text-align: center;
 }
@@ -39,9 +39,7 @@ ul{
     margin-right: 15%;
 }
 
-.diferenciales{
-    padding: 30px;
-}
+
 .imagenDiferenciales{
    width: 50%;
 }
